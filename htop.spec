@@ -1,6 +1,6 @@
 Name:           htop
 Version:        0.6.6
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Interactive text-mode process viewer for Linux
 License:        GPL
 Group:          Monitoring
@@ -35,22 +35,11 @@ Some advantages over top:
 rm -rf %{buildroot}
 %{makeinstall}
 
-mkdir -p %{buildroot}/%{_menudir}
-
-cat > %{buildroot}%{_menudir}/%{name} << EOF
-?package(%name): needs="text" \
-        section="System/Monitoring" \
-        title="%{name}" \
-        longtitle="%{summary}" \
-        command="%{_bindir}/%{name}" \
-        icon="" \
-        xdg="true"
-EOF
-
 desktop-file-install --vendor="" \
   --add-category="System" \
   --add-category="Monitor" \
-  --add-category="X-MandrivaLinux-System-Monitoring" \
+  --remove-key="Path" \
+  --remove-key="Version" \
   --remove-category="Application" \
   --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
@@ -70,5 +59,5 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/*
-%{_menudir}/%name
 %{_mandir}/man1/%{name}.*
+
