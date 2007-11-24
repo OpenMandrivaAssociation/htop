@@ -1,8 +1,8 @@
 Name:           htop
-Version:        0.6.6
-Release:        %mkrel 3
+Version:        0.7
+Release:        %mkrel 1
 Summary:        Interactive text-mode process viewer for Linux
-License:        GPL
+License:        GPLv2+
 Group:          Monitoring
 URL:            http://htop.sourceforge.net/
 Source0:        http://ovh.dl.sourceforge.net/htop/htop-%{version}.tar.gz
@@ -36,7 +36,6 @@ rm -rf %{buildroot}
 %{makeinstall}
 
 desktop-file-install --vendor="" \
-  --add-category="System" \
   --add-category="Monitor" \
   --remove-key="Path" \
   --remove-key="Version" \
@@ -60,4 +59,3 @@ rm -rf %{buildroot}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/*
 %{_mandir}/man1/%{name}.*
-
