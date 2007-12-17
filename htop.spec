@@ -8,7 +8,6 @@ URL:            http://htop.sourceforge.net/
 Source0:        http://ovh.dl.sourceforge.net/htop/htop-%{version}.tar.gz
 BuildRequires:  desktop-file-utils
 BuildRequires:  ncurses-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 htop is an interactive process viewer for Linux, similar to top.
