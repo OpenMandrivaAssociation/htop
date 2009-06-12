@@ -10,6 +10,7 @@ Source0:        http://ovh.dl.sourceforge.net/htop/htop-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  ncurses-devel
+BuildRequires:  libncursesw-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
