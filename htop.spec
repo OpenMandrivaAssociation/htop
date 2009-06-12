@@ -1,12 +1,13 @@
 Name:           htop
-Version:        0.8.1
-Release:        %mkrel 2
+Version:        0.8.2
+Release:        %mkrel 1
+
 Summary:        Interactive text-mode process viewer for Linux
 License:        GPLv2+
 Group:          Monitoring
 URL:            http://htop.sourceforge.net/
 Source0:        http://ovh.dl.sourceforge.net/htop/htop-%{version}.tar.gz
-Patch0:         htop-0.8.1-tgid.patch
+
 BuildRequires:  desktop-file-utils
 BuildRequires:  ncurses-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -27,8 +28,6 @@ Some advantages over top:
 
 %prep
 %setup -q
-# fix bug #50926
-%patch0 -p1 -b .tgid
 
 %build
 %{configure2_5x}
