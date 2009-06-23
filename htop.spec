@@ -1,5 +1,5 @@
 Name:           htop
-Version:        0.8.2
+Version:        0.8.3
 Release:        %mkrel 1
 
 Summary:        Interactive text-mode process viewer for Linux
