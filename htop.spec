@@ -1,5 +1,5 @@
 Name:           htop
-Version:        1.0
+Version:        1.0.1
 Release:        1
 
 Summary:        Interactive text-mode process viewer for Linux
@@ -11,7 +11,6 @@ Source0:        http://ovh.dl.sourceforge.net/htop/htop-%{version}.tar.gz
 BuildRequires:  desktop-file-utils
 BuildRequires:  ncurses-devel
 BuildRequires:  libncursesw-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 htop is an interactive process viewer for Linux, similar to top.
@@ -35,8 +34,7 @@ Some advantages over top:
 %{make}
 
 %install
-rm -rf %{buildroot}
-%{makeinstall}
+%{makeinstall_std}
 
 desktop-file-install --vendor="" \
   --add-category="Monitor" \
@@ -46,21 +44,7 @@ desktop-file-install --vendor="" \
   --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 
-%clean
-rm -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%endif
-                
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%endif
-
 %files
-%defattr(-,root,root)
 %doc README AUTHORS NEWS
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
