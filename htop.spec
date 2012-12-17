@@ -10,10 +10,10 @@ Source0:        http://ovh.dl.sourceforge.net/htop/htop-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  pkgconfig(ncursesw)
-BuildRequires:  pkgconfig(ncurses++)
+BuildRequires:  pkgconfig(ncurses++w)
 BuildRequires:  pkgconfig(ncurses)
-BuildRequires:  pkgconfig(menu)
-BuildRequires:  pkgconfig(form)
+BuildRequires:  pkgconfig(menuw)
+BuildRequires:  pkgconfig(formw)
 
 
 %description
