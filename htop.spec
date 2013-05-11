@@ -1,12 +1,11 @@
+Summary:        Interactive text-mode process viewer for Linux
 Name:           htop
 Version:        1.0.2
 Release:        1
-
-Summary:        Interactive text-mode process viewer for Linux
 License:        GPLv2+
 Group:          Monitoring
-URL:            http://htop.sourceforge.net/
-Source0:        http://ovh.dl.sourceforge.net/htop/htop-%{version}.tar.gz
+Url:            http://htop.sourceforge.net/
+Source0:        http://ovh.dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  pkgconfig(ncursesw)
@@ -14,7 +13,6 @@ BuildRequires:  pkgconfig(ncurses++w)
 BuildRequires:  pkgconfig(ncurses)
 BuildRequires:  pkgconfig(menuw)
 BuildRequires:  pkgconfig(formw)
-
 
 %description
 htop is an interactive process viewer for Linux, similar to top.
@@ -34,11 +32,11 @@ Some advantages over top:
 %setup -q
 
 %build
-%{configure2_5x}
-%{make}
+%configure2_5x
+%make
 
 %install
-%{makeinstall_std}
+%makeinstall_std
 # A hack to hide htop.from the menu
 rm -f %{buildroot}/%{_datadir}/applications/%{name}.desktop
 
@@ -47,3 +45,4 @@ rm -f %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %{_bindir}/%{name}
 %{_datadir}/pixmaps/*
 %{_mandir}/man1/%{name}.*
+
