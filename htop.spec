@@ -10,7 +10,7 @@ Source0:        http://hisham.hm/htop/releases/1.0.3/%{name}-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  pkgconfig(ncursesw)
-BuildRequires:  pkgconfig(ncurses++w)
+BuildRequires:  pkgconfig(ncurses++)
 BuildRequires:  pkgconfig(ncurses)
 BuildRequires:  pkgconfig(menuw)
 BuildRequires:  pkgconfig(formw)
