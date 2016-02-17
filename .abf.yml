@@ -1,4 +1,2 @@
-removed_sources:
-  htop-1.0.2.tar.gz: 07893b93fe8109610f8e9976b3934ae4bb7a925d
 sources:
-  htop-1.0.3.tar.gz: 261492274ff4e741e72db1ae904af5766fc14ef4
+  htop-2.0.0.tar.gz: 73bf8b97d4ee74066c75c0f9e0c1eacbaff11ba0
