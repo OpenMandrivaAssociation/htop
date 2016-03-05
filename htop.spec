@@ -1,48 +1,27 @@
-Summary:        Interactive text-mode process viewer for Linux
-
-Name:           htop
-Version:        2.0.0
-Release:        1
-License:        GPLv2+
-Group:          Monitoring
-Url:            http://htop.sourceforge.net/
-Source0:	http://hisham.hm/htop/releases/%{version}/%{name}-%{version}.tar.gz
-
-BuildRequires:  desktop-file-utils
-BuildRequires:  pkgconfig(ncursesw)
-BuildRequires:  pkgconfig(menuw)
-BuildRequires:  pkgconfig(formw)
-
-%description
-htop is an interactive process viewer for Linux, similar to top.
-It requires ncurses. Tested with Linux 2.4 and 2.6.
-
-Some advantages over top:
-
-* you can scroll the list vertically and horizontally to see
-  all processes and complete command lines
-* htop starts faster than top
-* you don't need to type the process number to kill a process
-* you don't need to type the process number or the priority value to
-  renice a process
-* htop supports mouse operation
-
-%prep
-%setup -q
-
-%build
-%configure2_5x
-%make
-
-%install
-%makeinstall_std
-# A hack to hide htop.from the menu
-rm -f %{buildroot}/%{_datadir}/applications/%{name}.desktop
-
-%files
-%doc README AUTHORS NEWS
-%{_bindir}/%{name}
-%{_datadir}/pixmaps/*
-%{_mandir}/man1/%{name}.*
-
-
+U3VtbWFyeTogICAgICAgIEludGVyYWN0aXZlIHRleHQtbW9kZSBwcm9jZXNz
+IHZpZXdlciBmb3IgTGludXgKCk5hbWU6ICAgICAgICAgICBodG9wClZlcnNp
+b246ICAgICAgICAyLjAuMApSZWxlYXNlOiAgICAgICAgMgpMaWNlbnNlOiAg
+ICAgICAgR1BMdjIrCkdyb3VwOiAgICAgICAgICBNb25pdG9yaW5nClVybDog
+ICAgICAgICAgICBodHRwOi8vaHRvcC5zb3VyY2Vmb3JnZS5uZXQvClNvdXJj
+ZTA6CWh0dHA6Ly9oaXNoYW0uaG0vaHRvcC9yZWxlYXNlcy8le3ZlcnNpb259
+LyV7bmFtZX0tJXt2ZXJzaW9ufS50YXIuZ3oKCkJ1aWxkUmVxdWlyZXM6ICBk
+ZXNrdG9wLWZpbGUtdXRpbHMKQnVpbGRSZXF1aXJlczogIHBrZ2NvbmZpZyhu
+Y3Vyc2VzdykKQnVpbGRSZXF1aXJlczogIHBrZ2NvbmZpZyhtZW51dykKQnVp
+bGRSZXF1aXJlczogIHBrZ2NvbmZpZyhmb3JtdykKCiVkZXNjcmlwdGlvbgpo
+dG9wIGlzIGFuIGludGVyYWN0aXZlIHByb2Nlc3Mgdmlld2VyIGZvciBMaW51
+eCwgc2ltaWxhciB0byB0b3AuCkl0IHJlcXVpcmVzIG5jdXJzZXMuIFRlc3Rl
+ZCB3aXRoIExpbnV4IDIuNCBhbmQgMi42LgoKU29tZSBhZHZhbnRhZ2VzIG92
+ZXIgdG9wOgoKKiB5b3UgY2FuIHNjcm9sbCB0aGUgbGlzdCB2ZXJ0aWNhbGx5
+IGFuZCBob3Jpem9udGFsbHkgdG8gc2VlCiAgYWxsIHByb2Nlc3NlcyBhbmQg
+Y29tcGxldGUgY29tbWFuZCBsaW5lcwoqIGh0b3Agc3RhcnRzIGZhc3RlciB0
+aGFuIHRvcAoqIHlvdSBkb24ndCBuZWVkIHRvIHR5cGUgdGhlIHByb2Nlc3Mg
+bnVtYmVyIHRvIGtpbGwgYSBwcm9jZXNzCiogeW91IGRvbid0IG5lZWQgdG8g
+dHlwZSB0aGUgcHJvY2VzcyBudW1iZXIgb3IgdGhlIHByaW9yaXR5IHZhbHVl
+IHRvCiAgcmVuaWNlIGEgcHJvY2VzcwoqIGh0b3Agc3VwcG9ydHMgbW91c2Ug
+b3BlcmF0aW9uCgolcHJlcAolc2V0dXAgLXEKCiVidWlsZAolY29uZmlndXJl
+Ml81eAolbWFrZQoKJWluc3RhbGwKJW1ha2VpbnN0YWxsX3N0ZAojIEEgaGFj
+ayB0byBoaWRlIGh0b3AuZnJvbSB0aGUgbWVudQpybSAtZiAle2J1aWxkcm9v
+dH0vJXtfZGF0YWRpcn0vYXBwbGljYXRpb25zLyV7bmFtZX0uZGVza3RvcAoK
+JWZpbGVzCiVkb2MgUkVBRE1FIEFVVEhPUlMgTkVXUwole19iaW5kaXJ9LyV7
+bmFtZX0KJXtfZGF0YWRpcn0vcGl4bWFwcy8qCiV7X21hbmRpcn0vbWFuMS8l
+e25hbWV9LioKCgo=
