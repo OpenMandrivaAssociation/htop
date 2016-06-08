@@ -1,8 +1,8 @@
 Summary:        Interactive text-mode process viewer for Linux
 
 Name:           htop
-Version:        2.0.0
-Release:        7
+Version:        2.0.1
+Release:        1
 License:        GPLv2+
 Group:          Monitoring
 Url:            http://htop.sourceforge.net/
@@ -31,7 +31,7 @@ Some advantages over top:
 %setup -q
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
