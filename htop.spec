@@ -6,7 +6,7 @@ Release:        1
 License:        GPLv2+
 Group:          Monitoring
 Url:            http://htop.sourceforge.net/
-Source0:	http://hisham.hm/htop/releases/%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/hishamhm/htop/archive/%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  pkgconfig(ncursesw)
