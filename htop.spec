@@ -1,5 +1,6 @@
-Summary:        Interactive text-mode process viewer for Linux
+%define _disable_rebuild_configure 1
 
+Summary:        Interactive text-mode process viewer for Linux
 Name:           htop
 Version:        2.2.0
 Release:        4
@@ -29,7 +30,6 @@ Some advantages over top:
 
 %prep
 %autosetup -p1
-mkdir -p m4
 
 %build
 %configure
