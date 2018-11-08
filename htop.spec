@@ -30,6 +30,7 @@ Some advantages over top:
 
 %prep
 %autosetup -p1
+./autogen.sh
 
 %build
 %configure
