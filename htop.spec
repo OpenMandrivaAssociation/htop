@@ -12,7 +12,6 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  pkgconfig(ncursesw)
 BuildRequires:  pkgconfig(menuw)
 BuildRequires:  pkgconfig(formw)
-BuildRequires:  m4
 
 %description
 htop is an interactive process viewer for Linux, similar to top.
@@ -30,6 +29,7 @@ Some advantages over top:
 
 %prep
 %autosetup -p1
+mkdir -p m4
 
 %build
 %configure
@@ -45,4 +45,3 @@ rm -f %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %{_bindir}/%{name}
 %{_datadir}/pixmaps/*
 %{_mandir}/man1/%{name}.*
-
