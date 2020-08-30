@@ -2,12 +2,16 @@
 
 Summary:        Interactive text-mode process viewer for Linux
 Name:           htop
-Version:        2.2.0
-Release:        4
+Version:        3.0.0
+Release:        1
 License:        GPLv2+
 Group:          Monitoring
-Url:            http://htop.sourceforge.net/
-Source0:	https://github.com/hishamhm/htop/archive/%{version}.tar.gz
+# Original but old sources
+#Url:            http://htop.sourceforge.net/
+#Source0:	https://github.com/hishamhm/htop/archive/%{version}.tar.gz
+# Sources from fork which got the permission of the original creator of the project to continue it.
+Url:            https://htop.dev
+Source0:        https://github.com/htop-dev/htop/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  pkgconfig(ncursesw)
