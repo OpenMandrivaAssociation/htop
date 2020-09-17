@@ -1,22 +1,22 @@
 %define _disable_rebuild_configure 1
 
-Summary:        Interactive text-mode process viewer for Linux
-Name:           htop
-Version:	3.0.1
+Summary:	Interactive text-mode process viewer for Linux
+Name:		htop
+Version:	3.0.2
 Release:	1
-License:        GPLv2+
-Group:          Monitoring
+License:	GPLv2+
+Group:		Monitoring
 # Original but old sources
 #Url:            http://htop.sourceforge.net/
 #Source0:	https://github.com/hishamhm/htop/archive/%{version}.tar.gz
 # Sources from fork which got the permission of the original creator of the project to continue it.
-Url:            https://htop.dev
-Source0:        https://github.com/htop-dev/htop/archive/%{version}/%{name}-%{version}.tar.gz
+Url:		https://htop.dev
+Source0:	https://github.com/htop-dev/htop/archive/%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:  desktop-file-utils
-BuildRequires:  pkgconfig(ncursesw)
-BuildRequires:  pkgconfig(menuw)
-BuildRequires:  pkgconfig(formw)
+BuildRequires:	desktop-file-utils
+BuildRequires:	pkgconfig(ncursesw)
+BuildRequires:	pkgconfig(menuw)
+BuildRequires:	pkgconfig(formw)
 
 %description
 htop is an interactive process viewer for Linux, similar to top.
@@ -37,7 +37,11 @@ Some advantages over top:
 ./autogen.sh
 
 %build
-%configure
+%configure \
+    --enable-taskstats \
+    --enable-unicode \
+    --enable-cgroup
+
 %make_build
 
 %install
