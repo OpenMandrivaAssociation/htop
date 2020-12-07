@@ -2,7 +2,7 @@
 
 Summary:	Interactive text-mode process viewer for Linux
 Name:		htop
-Version:	3.0.2
+Version:	3.0.3
 Release:	1
 License:	GPLv2+
 Group:		Monitoring
@@ -53,4 +53,5 @@ rm -f %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %doc README AUTHORS NEWS
 %{_bindir}/%{name}
 %{_datadir}/pixmaps/*
+%{_datadir}/icons/*/*/*/*.*
 %{_mandir}/man1/%{name}.*
