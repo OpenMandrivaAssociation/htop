@@ -1,9 +1,10 @@
+%global optflags %{optflags} -Oz
 %define _disable_rebuild_configure 1
 
 Summary:	Interactive text-mode process viewer for Linux
 Name:		htop
 Version:	3.2.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Monitoring
 # Original but old sources
@@ -54,4 +55,4 @@ rm -f %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %{_bindir}/%{name}
 %{_datadir}/pixmaps/*
 %{_datadir}/icons/*/*/*/*.*
-%{_mandir}/man1/%{name}.*
+%doc %{_mandir}/man1/%{name}.*
