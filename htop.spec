@@ -14,6 +14,11 @@ Group:		Monitoring
 Url:		https://htop.dev
 Source0:	https://github.com/htop-dev/htop/archive/%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(menuw)
