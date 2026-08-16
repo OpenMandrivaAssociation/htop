@@ -3,7 +3,7 @@
 
 Summary:	Interactive text-mode process viewer for Linux
 Name:		htop
-Version:	3.5.2
+Version:	3.5.3
 Release:	1
 License:	GPLv2+
 Group:		Monitoring
@@ -16,8 +16,6 @@ Source0:	https://github.com/htop-dev/htop/archive/%{version}/%{name}-%{version}.
 
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base
-BuildRequires:	slibtool
 BuildRequires:	make
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(ncursesw)
@@ -44,9 +42,7 @@ Some advantages over top:
 
 %build
 %configure \
-    --enable-taskstats \
-    --enable-unicode \
-    --enable-cgroup
+    --enable-unicode
 
 %make_build
 
@@ -56,7 +52,7 @@ Some advantages over top:
 rm -f %{buildroot}/%{_datadir}/applications/%{name}.desktop
 
 %files
-%doc README AUTHORS NEWS
+%doc README.md AUTHORS NEWS
 %{_bindir}/%{name}
 %{_datadir}/pixmaps/*
 %{_datadir}/icons/*/*/*/*.*
